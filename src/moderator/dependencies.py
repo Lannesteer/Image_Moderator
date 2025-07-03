@@ -1,6 +1,6 @@
 from fastapi import UploadFile, File
 
-from src.moderator.exception import ModeratorException
+from src.moderator.exceptions import ModeratorException
 
 
 async def validation_image(image: UploadFile = File(...)) -> UploadFile:
