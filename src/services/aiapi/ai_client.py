@@ -31,7 +31,7 @@ class AIAPI:
                 if response.status == 200:
                     result = await response.json()
                     scores = {item["label"]: item["score"] for item in result}
-                    nsfw_score = scores.get("nsfw_score", 0)
+                    nsfw_score = scores.get("nsfw", 0)
                     return nsfw_score
                 else:
                     error = await response.text()
